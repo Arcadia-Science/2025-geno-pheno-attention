@@ -20,7 +20,7 @@ In order to have the same dataset used in the original publication the
 
 files need to be combined into a single file. Then they need to be converted into a numpy format using the script `convert_geno_data.py`.
 
-For example, let's saw we have all of the file in `example_data`. Then we would run the following commands:
+For example, let's say we have all of the file in `example_data`. Then we would run the following commands:
 
 ```bash
 cat example_data/geno_data_*.txt.gz > example_data/geno_data.txt.gz
