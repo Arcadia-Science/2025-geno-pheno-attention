@@ -1,6 +1,6 @@
 # Data Collection
 
-This document goes over the process of acquiring the original data files for the project and processing them to get the format used in the publication.
+This [Zenodo link](https://zenodo.org/records/15313069) hosts the train/validation/test datasets we used in our publication. If you want to build off this work, downloading those datasets is the easiest way to get started. If instead you want to process the data upstream of those pre-partitioned datasets, this document partial instructions for downloading and wrangling the data.
 
 ## Data Sources
 
@@ -27,3 +27,9 @@ cat example_data/geno_data_*.txt.gz > example_data/geno_data.txt.gz
 
 python convert_geno_data.py -i example_data/geno_data.txt.gz -o example_data/merged_geno_data.npy
 ```
+
+The final step is to run the https://github.com/Emergent-Behaviors-in-Biology/GenoPhenoMapAttention/blob/main/obtain_independent_loci.ipynb notebook to obtain the "independent" loci, which creates the `ind_loci_list_3.npy` file.
+
+The resulting files directly plug into the notebook files provided by Rijal et al: https://github.com/Emergent-Behaviors-in-Biology/GenoPhenoMapAttention/tree/main/experiment, which let us begin reproducing their work.
+
+In their notebooks, Rijal et al partition the datasets into train/validation/test datasets on-the-fly, relying on consistent RNG seeding. We instead ran one of their notebooks, using the same RNG seeds, up until the data partitioning and standard normalization, then wrote the resulting numpy arrays to file, which is what we uploaded to Zenodo.
