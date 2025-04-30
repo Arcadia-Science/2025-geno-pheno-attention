@@ -17,7 +17,7 @@ In order to have the same dataset used in the original publication the
 - geno_data_4.txt.gz
 - geno_data_5.txt.gz
 
-files need to be combined into a single file. Then they need to converted into a numpy format using the script `convert_to_numpy.py`.
+files need to be combined into a single file. Then they need to be converted into a numpy format using the script `convert_geno_data.py`.
 
 For example, let's saw we have all of the file in `example_data`. Then we would run the following commands:
 
