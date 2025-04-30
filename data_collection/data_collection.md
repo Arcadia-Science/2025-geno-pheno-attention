@@ -11,6 +11,7 @@ The source for the data is https://elifesciences.org/articles/73983. The inferre
 Download all of the files from https://datadryad.org/dataset/doi:10.5061/dryad.1rn8pk0vd and place them into a directory.
 
 In order to have the same dataset used in the original publication the
+
 - geno_data_1.txt.gz
 - geno_data_2.txt.gz
 - geno_data_3.txt.gz
