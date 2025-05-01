@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://Arcadia-Science.github.io/2025-geno-pheno-attention/index_v1.0.html</loc>
-    <lastmod>2025-05-01T22:55:12.132Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Arcadia-Science.github.io/2025-geno-pheno-attention/examples/demo.html</loc>
-    <lastmod>2025-05-01T22:55:12.126Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Arcadia-Science.github.io/2025-geno-pheno-attention/pages/FAQ.html</loc>
-    <lastmod>2025-05-01T22:55:13.203Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Arcadia-Science.github.io/2025-geno-pheno-attention/pages/CONTRIBUTING.html</loc>
-    <lastmod>2025-05-01T22:55:13.203Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Arcadia-Science.github.io/2025-geno-pheno-attention/pages/SETUP.html</loc>
-    <lastmod>2025-05-01T22:55:13.203Z</lastmod>
+    <loc>https://Arcadia-Science.github.io/2025-geno-pheno-attention/index_v1.1.html</loc>
+    <lastmod>2025-05-01T23:22:58.119Z</lastmod>
   </url>
   <url>
     <loc>https://Arcadia-Science.github.io/2025-geno-pheno-attention/index.html</loc>
-    <lastmod>2025-05-01T22:55:12.129Z</lastmod>
+    <lastmod>2025-05-01T23:22:58.113Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Arcadia-Science.github.io/2025-geno-pheno-attention/pages/SETUP.html</loc>
+    <lastmod>2025-05-01T23:22:59.185Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Arcadia-Science.github.io/2025-geno-pheno-attention/pages/CONTRIBUTING.html</loc>
+    <lastmod>2025-05-01T23:22:59.185Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Arcadia-Science.github.io/2025-geno-pheno-attention/pages/FAQ.html</loc>
+    <lastmod>2025-05-01T23:22:59.185Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Arcadia-Science.github.io/2025-geno-pheno-attention/examples/demo.html</loc>
+    <lastmod>2025-05-01T23:22:58.110Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Arcadia-Science.github.io/2025-geno-pheno-attention/index_v1.0.html</loc>
+    <lastmod>2025-05-01T23:22:58.116Z</lastmod>
   </url>
 </urlset>
