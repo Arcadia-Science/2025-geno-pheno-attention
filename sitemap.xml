@@ -1,35 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://Arcadia-Science.github.io/2025-geno-pheno-attention/index_v1.2.html</loc>
-    <lastmod>2025-05-02T18:13:15.472Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Arcadia-Science.github.io/2025-geno-pheno-attention/index_v1.0.html</loc>
-    <lastmod>2025-05-02T18:13:15.472Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Arcadia-Science.github.io/2025-geno-pheno-attention/examples/demo.html</loc>
-    <lastmod>2025-05-02T18:13:15.467Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Arcadia-Science.github.io/2025-geno-pheno-attention/pages/FAQ.html</loc>
-    <lastmod>2025-05-02T18:13:16.545Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Arcadia-Science.github.io/2025-geno-pheno-attention/pages/CONTRIBUTING.html</loc>
-    <lastmod>2025-05-02T18:13:16.545Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Arcadia-Science.github.io/2025-geno-pheno-attention/pages/SETUP.html</loc>
-    <lastmod>2025-05-02T18:13:16.545Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Arcadia-Science.github.io/2025-geno-pheno-attention/index.html</loc>
-    <lastmod>2025-05-02T18:13:15.471Z</lastmod>
+    <loc>https://Arcadia-Science.github.io/2025-geno-pheno-attention/index_v1.3.html</loc>
+    <lastmod>2025-05-09T21:40:56.644Z</lastmod>
   </url>
   <url>
     <loc>https://Arcadia-Science.github.io/2025-geno-pheno-attention/index_v1.1.html</loc>
-    <lastmod>2025-05-02T18:13:15.472Z</lastmod>
+    <lastmod>2025-05-09T21:40:56.643Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Arcadia-Science.github.io/2025-geno-pheno-attention/index.html</loc>
+    <lastmod>2025-05-09T21:40:56.642Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Arcadia-Science.github.io/2025-geno-pheno-attention/pages/SETUP.html</loc>
+    <lastmod>2025-05-09T21:40:57.708Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Arcadia-Science.github.io/2025-geno-pheno-attention/pages/CONTRIBUTING.html</loc>
+    <lastmod>2025-05-09T21:40:57.708Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Arcadia-Science.github.io/2025-geno-pheno-attention/pages/FAQ.html</loc>
+    <lastmod>2025-05-09T21:40:57.708Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Arcadia-Science.github.io/2025-geno-pheno-attention/examples/demo.html</loc>
+    <lastmod>2025-05-09T21:40:56.638Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Arcadia-Science.github.io/2025-geno-pheno-attention/index_v1.0.html</loc>
+    <lastmod>2025-05-09T21:40:56.643Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Arcadia-Science.github.io/2025-geno-pheno-attention/index_v1.2.html</loc>
+    <lastmod>2025-05-09T21:40:56.644Z</lastmod>
   </url>
 </urlset>
