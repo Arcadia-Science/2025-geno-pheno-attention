@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-05-01">
+<meta name="dcterms.date" content="2025-04-30">
 
 <title>Cross-trait learning with a canonical transformer tops custom attention in genotype-phenotype mapping –</title>
 <style>
@@ -838,7 +838,7 @@ window.Quarto = {
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text"><iconify-icon role="img" inline="" icon="nrk:back" aria-label="Icon back from nrk Iconify.design set." title="Icon back from nrk Iconify.design set."></iconify-icon> Back to Pub</span></a>
   </li>  
 </ul>
@@ -883,16 +883,10 @@ window.Quarto = {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">May 1, 2025</p>
+        <p class="date">April 30, 2025</p>
       </div>
     </div>
     
-      <div>
-      <div class="quarto-title-meta-heading">Modified</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date-modified">May 16, 2025</p>
-      </div>
-    </div>
       
     </div>
     
@@ -1249,7 +1243,7 @@ A note about training behavior
 <div id="fig-rep" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-rep-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="index_files/figure-html/fig-rep-output-1.png" class="img-fluid figure-img">
+<img src="index_v1.2_files/figure-html/fig-rep-output-1.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rep-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: Comparison of test-set <span class="math inline">\(R^2\)</span> values between <span class="citation" data-cites="Rijal2025">Rijal et al. (<a href="#ref-Rijal2025" role="doc-biblioref">2025</a>)</span> (“Source”) and our re-implementation (“Reproduction”).
@@ -1305,16 +1299,21 @@ Figure&nbsp;1: Comparison of test-set <span class="math inline">\(R^2\)</span> v
 </thead>
 <tbody>
 <tr class="odd">
+<td><strong>Random projection of a diagonal genotype matrix</strong> <code>X(g)·R</code></td>
+<td>Encodes each locus as a row of a fixed random matrix <code>R</code>, multiplied by the allele sign (±1).</td>
+<td>A learned embedding table <code>nn.Embedding(L, D)</code> whose rows are multiplied by the allele sign.</td>
+</tr>
+<tr class="even">
 <td><strong>Concatenated column of ones</strong></td>
 <td>Appends a constant 1 to every token to mimic an explicit bias term (Appendix F in the original paper).</td>
 <td>Simply enable the bias in the linear Q, K, V projections (<code>nn.Linear(..., bias=True)</code>).</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><strong>Phenotype represented as an <em>input</em> token</strong></td>
 <td>Adds one-hot phenotype tokens to the sequence, forcing attention layers to discover gene × phenotype interactions.</td>
 <td>Condition the model <em>after</em> the attention block: predict all phenotypes jointly from a pooled sequence representation (see below).</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><strong>Flattened fitness matrix</strong></td>
 <td>Treats each (genotype, phenotype) pair as an independent sample; the network outputs one scalar at a time.</td>
 <td>Mean-pool the token embeddings → <code>(B, D)</code> and use a single linear layer <code>D → 18</code> so all phenotypes are predicted simultaneously.</td>
@@ -1493,7 +1492,7 @@ Pre-trained model 'std_d128_rep_04' found. Returning path.</code></pre>
 <div id="fig-std" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-std-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="index_files/figure-html/fig-std-output-1.png" class="img-fluid figure-img">
+<img src="index_v1.2_files/figure-html/fig-std-output-1.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-std-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;2: Per-phenotype generalisation of multi-task vs.&nbsp;single-task models. Bar heights show the mean test-set <span class="math inline">\(R^{2}\)</span> achieved across replicates for each phenotype, with error bars denoting the standard deviation (SD). “Rijal” is the single-phenotype results reported in <span class="citation" data-cites="Rijal2025">Rijal et al. (<a href="#ref-Rijal2025" role="doc-biblioref">2025</a>)</span>, while “Canonical” is our multi-output head trained to predict all phenotypes jointly.
@@ -1665,7 +1664,7 @@ Pre-trained model 'xformer_rep_04' found. Returning path.</code></pre>
 <div id="fig-xformer" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-xformer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="index_files/figure-html/fig-xformer-output-1.png" class="img-fluid figure-img">
+<img src="index_v1.2_files/figure-html/fig-xformer-output-1.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-xformer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;3: The vanilla transformer performances added alongside the models compared in <a href="#fig-std" class="quarto-xref">Figure&nbsp;2</a>.
