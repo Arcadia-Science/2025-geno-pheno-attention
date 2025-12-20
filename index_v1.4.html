@@ -844,7 +844,7 @@ window.Quarto = {
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text"><iconify-icon role="img" inline="" icon="nrk:back" aria-label="Icon back from nrk Iconify.design set." title="Icon back from nrk Iconify.design set."></iconify-icon> Back to Pub</span></a>
   </li>  
 </ul>
@@ -905,7 +905,7 @@ window.Quarto = {
   <div>
     <div class="abstract">
       <div class="block-title">Summary</div>
-      <p>We added standard transformer components, omitted by <span class="citation" data-cites="Rijal2025">Rijal et al. (<a href="#ref-Rijal2025" role="doc-biblioref">2025</a>)</span> in their attention-based genotype–phenotype mapping. We found that this addition substantially boosts predictive accuracy on their yeast dataset.</p>
+      <p><span class="citation" data-cites="Rijal2025">Rijal et al. (<a href="#ref-Rijal2025" role="doc-biblioref">2025</a>)</span> recently applied attention mechanisms to the problem of mapping genotype to phenotype. We noted their architecture omitted standard transformer components, prompting us to test if including these elements could enhance performance on their multi-phenotype yeast dataset. Our analysis revealed that incorporating standard transformer elements substantially improves predictive accuracy for this task.</p>
     </div>
   </div>
   
@@ -917,8 +917,7 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#purpose" id="toc-purpose" class="nav-link active" data-scroll-target="#purpose">Purpose</a></li>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#the-dataset" id="toc-the-dataset" class="nav-link" data-scroll-target="#the-dataset">The dataset</a></li>
   <li><a href="#reproducing-single-phenotype-results" id="toc-reproducing-single-phenotype-results" class="nav-link" data-scroll-target="#reproducing-single-phenotype-results">Reproducing single phenotype results</a></li>
   <li><a href="#canonical-ml-components-outperform-bespoke-customization" id="toc-canonical-ml-components-outperform-bespoke-customization" class="nav-link" data-scroll-target="#canonical-ml-components-outperform-bespoke-customization">Canonical ML components outperform bespoke customization</a>
@@ -966,12 +965,6 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<section id="purpose" class="level2">
-<h2 class="anchored" data-anchor-id="purpose">Purpose</h2>
-<p>Attention mechanisms are increasingly applied to genotype–phenotype mapping problems, particularly for capturing epistatic interactions. Rijal et al.&nbsp;(2025) recently demonstrated an attention-based model for this task, but their architecture omitted standard transformer components like skip connections, layer normalization, and feed-forward sub-layers.</p>
-<p>Here, we test whether incorporating these canonical elements improves predictive performance. Using the same yeast dataset (~100,000 segregants, 18 growth phenotypes), we show that standard transformer components moderately improve accuracy. We also find that predicting all phenotypes jointly provides additional gains by leveraging cross-phenotype genetic correlations, an advantage the original single-output approach couldn’t exploit.</p>
-<p>This work should interest researchers applying deep learning to genotype–phenotype problems. Our results suggest that well-established architectural choices from the broader ML literature transfer well to genetics applications, and that multi-task learning offers a straightforward path to improved predictions when correlated phenotypes are available. We share all code and model checkpoints to enable rapid iteration by others.</p>
-</section>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>On April 11th, <span class="citation" data-cites="Rijal2025">Rijal et al. (<a href="#ref-Rijal2025" role="doc-biblioref">2025</a>)</span> released a preprint that introduces an application of attention mechanisms for inferring genotype-phenotype maps, particularly focusing on capturing complex epistatic interactions. This work sparked considerable interest given our ongoing exploration of nonlinear genotype-phenotype models.</p>
@@ -1262,7 +1255,7 @@ Pre-trained model 'fig3_4NQO' found. Returning path.</code></pre>
 <div id="fig-rep" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-rep-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="index_files/figure-html/fig-rep-output-1.png" class="img-fluid figure-img">
+<img src="index_v1.4_files/figure-html/fig-rep-output-1.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rep-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: Comparison of test-set <span class="math inline">\(R^2\)</span> values between <span class="citation" data-cites="Rijal2025">Rijal et al. (<a href="#ref-Rijal2025" role="doc-biblioref">2025</a>)</span> (“Source”) and our re-implementation (“Reproduction”).
@@ -1506,7 +1499,7 @@ Pre-trained model 'std_d128_rep_04' found. Returning path.</code></pre>
 <div id="fig-std" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-std-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="index_files/figure-html/fig-std-output-1.png" class="img-fluid figure-img">
+<img src="index_v1.4_files/figure-html/fig-std-output-1.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-std-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;2: Per-phenotype generalisation of multi-task vs.&nbsp;single-task models. Bar heights show the mean test-set <span class="math inline">\(R^{2}\)</span> achieved across replicates for each phenotype, with error bars denoting the standard deviation (SD). “Rijal” is the single-phenotype results reported in <span class="citation" data-cites="Rijal2025">Rijal et al. (<a href="#ref-Rijal2025" role="doc-biblioref">2025</a>)</span>, while “Canonical” is our multi-output head trained to predict all phenotypes jointly.
@@ -1678,7 +1671,7 @@ Pre-trained model 'xformer_rep_04' found. Returning path.</code></pre>
 <div id="fig-xformer" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-xformer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="index_files/figure-html/fig-xformer-output-1.png" class="img-fluid figure-img">
+<img src="index_v1.4_files/figure-html/fig-xformer-output-1.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-xformer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;3: The vanilla transformer performances added alongside the models compared in <a href="#fig-std" class="quarto-xref">Figure&nbsp;2</a>.
