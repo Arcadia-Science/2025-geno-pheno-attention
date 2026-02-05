@@ -179,3 +179,5 @@ cython_debug/
 /.quarto/
 /_site/
 /*_files/
+
+**/*.quarto_ipynb
